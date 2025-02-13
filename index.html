@@ -1,124 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="titleText">Document</title>
+
+    <link rel="stylesheet" href="assets/timer.css">
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const prod = "Назва продукта";
+        const shop = "Назва магазина";
+        const price = "Ціна";
+
+        const questions = [
+          "Are you from the US?",
+          `Did you buy something at ${shop}?`,
+          `Would you like to take part in ${prod}?`,
+        ];
+
+        const translations = {
+          titleText: "Поздравляем!",
+          h1: "Поздравляем!",
+          h1_p: `Вы были выбраны для участия в акции от ${shop}. У вас есть шанс выиграть ${prod} всего за ${price}!`,
+          h1_p2: `Если вы хотите получить ${prod}, вам нужно пройти опрос, чтобы подтвердить, что вы настоящий человек.`,
+          h1_p3: "Поторопитесь, количество лотов ограничено!",
+        };
+
+        for (const [id, text] of Object.entries(translations)) {
+          let element = document.getElementById(id);
+          if (element) {
+            element.innerHTML = text;
+          }
+        }
+
+        let currentQuestionIndex = 0;
+
+        const questionText = document.getElementById("questionText");
+        const questionNumber = document.getElementById("questionsNmb");
+        const mainSection = document.getElementById("main-section");
+        const boxSection = document.getElementById("box-section")
+
+        document.querySelectorAll(".answerBtn").forEach((button) => {
+          button.addEventListener("click", function () {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions.length) {
+              questionNumber.textContent = `Question ${
+                currentQuestionIndex + 1
+              } of 3`;
+              questionText.textContent = questions[currentQuestionIndex];
+            } else {
+                mainSection.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
+
     <header>
-        <img src="" alt="logo" width="320">
-        <div class="block_timer">
-            <p>Time remaining:</p>
-            <div class="wrap">
+      <img src="" alt="logo" width="320" />
+      <div class="block_timer">
+        <p>Time remaining:</p>
+        <div class="wrap">
+          <div class="countdown">
+            <div class="bloc-time hours" data-init-value="0">
+              <div class="figure hours hours-1">
+                <span class="top">0</span>
+                <span class="top-back">
+                  <span>2</span>
+                </span>
+                <span class="bottom">0</span>
+                <span class="bottom-back">
+                  <span>2</span>
+                </span>
+              </div>
 
-                <div class="countdown">
-                    <div class="bloc-time hours" data-init-value="0">
-
-                        <div class="figure hours hours-1">
-                            <span class="top">0</span>
-                            <span class="top-back">
-                                <span>2</span>
-                            </span>
-                            <span class="bottom">0</span>
-                            <span class="bottom-back">
-                                <span>2</span>
-                            </span>
-                        </div>
-
-                        <div class="figure hours hours-2">
-                            <span class="top">0</span>
-                            <span class="top-back">
-                                <span>4</span>
-                            </span>
-                            <span class="bottom">0</span>
-                            <span class="bottom-back">
-                                <span>4</span>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="bloc-time min" data-init-value="10">
-
-                        <div class="figure min min-1">
-                            <span class="top">0</span>
-                            <span class="top-back">
-                                <span>0</span>
-                            </span>
-                            <span class="bottom">0</span>
-                            <span class="bottom-back">
-                                <span>0</span>
-                            </span>
-                        </div>
-
-                        <div class="figure min min-2">
-                            <span class="top">0</span>
-                            <span class="top-back">
-                                <span>0</span>
-                            </span>
-                            <span class="bottom">0</span>
-                            <span class="bottom-back">
-                                <span>0</span>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="bloc-time sec" data-init-value="0">
-
-                        <div class="figure sec sec-1">
-                            <span class="top">0</span>
-                            <span class="top-back">
-                                <span>0</span>
-                            </span>
-                            <span class="bottom">0</span>
-                            <span class="bottom-back">
-                                <span>0</span>
-                            </span>
-                        </div>
-
-                        <div class="figure sec sec-2">
-                            <span class="top">0</span>
-                            <span class="top-back">
-                                <span>0</span>
-                            </span>
-                            <span class="bottom">0</span>
-                            <span class="bottom-back">
-                                <span>0</span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
+              <div class="figure hours hours-2">
+                <span class="top">0</span>
+                <span class="top-back">
+                  <span>4</span>
+                </span>
+                <span class="bottom">0</span>
+                <span class="bottom-back">
+                  <span>4</span>
+                </span>
+              </div>
             </div>
+
+            <div class="bloc-time min" data-init-value="10">
+              <div class="figure min min-1">
+                <span class="top">0</span>
+                <span class="top-back">
+                  <span>0</span>
+                </span>
+                <span class="bottom">0</span>
+                <span class="bottom-back">
+                  <span>0</span>
+                </span>
+              </div>
+
+              <div class="figure min min-2">
+                <span class="top">0</span>
+                <span class="top-back">
+                  <span>0</span>
+                </span>
+                <span class="bottom">0</span>
+                <span class="bottom-back">
+                  <span>0</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="bloc-time sec" data-init-value="0">
+              <div class="figure sec sec-1">
+                <span class="top">0</span>
+                <span class="top-back">
+                  <span>0</span>
+                </span>
+                <span class="bottom">0</span>
+                <span class="bottom-back">
+                  <span>0</span>
+                </span>
+              </div>
+
+              <div class="figure sec sec-2">
+                <span class="top">0</span>
+                <span class="top-back">
+                  <span>0</span>
+                </span>
+                <span class="bottom">0</span>
+                <span class="bottom-back">
+                  <span>0</span>
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </header>
 
     <main>
-        <section>
-            <div>
-                <h1 id="h1">Congratulations!</h1>
-                <p id="h1-p">You have been selected to participate in the Home Depot campaign. You have a chance to win a Milwaukee M18 18V Lithium-Ion Cordless Combo Kit for only 9.95$!</p>
-            </div>
-            <img src="" alt="main product" width="800">
-            <div>
-                <p id="h1-p2">If you want your Milwaukee M18 18V Lithium-Ion Cordless Combo Kit , you'll have to take a survey to confirm that you're a real person.</p>
-                <p id="h1-p3">Hurry, the number of lots is limited!</p>
-            </div>
-            <div>
-                <div> 
-                    <span id="questionsNmb">Question 1 of 3</span> 
-                    <span id="question">Are you from the US?</span> 
-                </div>
-                <div>
-                    <p id="answer1">Yes</p>
-                    <p id="answer2">No</p>
-                </div>
-            </div>
-        </section>
+      <section id="main-section">
+        <div>
+          <h1 id="h1">Congratulations!</h1>
+          <p id="h1_p">
+            You have been selected to participate in the Home Depot campaign.
+            You have a chance to win a Milwaukee M18 18V Lithium-Ion Cordless
+            Combo Kit for only 9.95$!
+          </p>
+        </div>
+        <img src="" alt="main product" width="800" />
+        <div>
+          <p id="h1_p2">
+            If you want your Milwaukee M18 18V Lithium-Ion Cordless Combo Kit ,
+            you'll have to take a survey to confirm that you're a real person.
+          </p>
+          <p id="h1_p3">Hurry, the number of lots is limited!</p>
+        </div>
+        <div>
+          <div id="questionContainer">
+            <span id="questionsNmb">Question 1 of 3</span>
+            <span id="questionText">Are you from the US?</span>
+          </div>
+          <div>
+            <button class="answerBtn">Yes</button>
+            <button class="answerBtn">No</button>
+          </div>
+        </div>
+      </section>
+      <section id="box-section">
 
+      </section>
     </main>
 
-    <footer>
+    <footer></footer>
 
-    </footer>
-</body>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="assets/main.js"></script>
+  </body>
 </html>
