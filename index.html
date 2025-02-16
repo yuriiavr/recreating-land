@@ -5,10 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title id="titleText">Document</title>
 
-    <link rel="stylesheet" href="assets/timer.css">
-    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="stylesheet" href="assets/timer.css" />
   </head>
   <body>
+    <style>
+      :root {
+        --bg_color_header: transparent;
+        --main_button_color: #ff6600;
+        --main_button_hover: #bf4e02;
+        --bg_color_footer: #000;
+        --bg_color_timer: black;
+        --color_timer: white;
+      }
+    </style>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const prod = "Назва продукта";
@@ -41,7 +51,7 @@
         const questionText = document.getElementById("questionText");
         const questionNumber = document.getElementById("questionsNmb");
         const mainSection = document.getElementById("main-section");
-        const boxSection = document.getElementById("box-section")
+        const boxSection = document.getElementById("box-section");
 
         document.querySelectorAll(".answerBtn").forEach((button) => {
           button.addEventListener("click", function () {
@@ -52,15 +62,15 @@
               } of 3`;
               questionText.textContent = questions[currentQuestionIndex];
             } else {
-                mainSection.style.display = "none";
+              mainSection.style.display = "none";
             }
           });
         });
       });
     </script>
 
-    <header>
-      <img src="" alt="logo" width="320" />
+    <header class="header">
+      <img src="assets/logo.png" alt="logo" width="320" class="logo" />
       <div class="block_timer">
         <p>Time remaining:</p>
         <div class="wrap">
@@ -143,41 +153,99 @@
 
     <main>
       <section id="main-section">
-        <div>
-          <h1 id="h1">Congratulations!</h1>
-          <p id="h1_p">
-            You have been selected to participate in the Home Depot campaign.
-            You have a chance to win a Milwaukee M18 18V Lithium-Ion Cordless
-            Combo Kit for only 9.95$!
-          </p>
-        </div>
-        <img src="" alt="main product" width="800" />
-        <div>
-          <p id="h1_p2">
-            If you want your Milwaukee M18 18V Lithium-Ion Cordless Combo Kit ,
-            you'll have to take a survey to confirm that you're a real person.
-          </p>
-          <p id="h1_p3">Hurry, the number of lots is limited!</p>
-        </div>
-        <div>
-          <div id="questionContainer">
-            <span id="questionsNmb">Question 1 of 3</span>
-            <span id="questionText">Are you from the US?</span>
+        <div class="container">
+          <div>
+            <h1 class="banner-title" id="h1">Congratulations!</h1>
+            <p class="banner-text" id="h1_p">
+              You have been selected to participate in the Home Depot campaign.
+              You have a chance to win a Milwaukee M18 18V Lithium-Ion Cordless
+              Combo Kit for only 9.95$!
+            </p>
+          </div>
+          <img src="assets/product.png" alt="main product" width="500" height="500" class="banner-img" />
+          <div>
+            <p id="h1_p2">
+              If you want your Milwaukee M18 18V Lithium-Ion Cordless Combo Kit ,
+              you'll have to take a survey to confirm that you're a real person.
+            </p>
+            <p id="h1_p3">Hurry, the number of lots is limited!</p>
           </div>
           <div>
-            <button class="answerBtn">Yes</button>
-            <button class="answerBtn">No</button>
+            <div id="questionContainer">
+              <span id="questionsNmb">Question 1 of 3</span>
+              <span id="questionText">Are you from the US?</span>
+            </div>
+            <div>
+              <button class="answerBtn">Yes</button>
+              <button class="answerBtn">No</button>
+            </div>
           </div>
         </div>
       </section>
-      <section id="box-section">
+      <section id="box-section"></section>
 
+      <section>
+        <div>
+          <div>
+            <h2 id="commentsHeader">Comments:</h2>
+          </div>
+
+          <div>
+            <div>
+              <div>
+                <form>
+                  <img src="" alt="avatar hover" />
+                  <div>
+                    <div>
+                      <textarea name="" id=""></textarea>
+                    </div>
+                    <div>
+                      <button id="sendBtn">Send</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <ul></ul>
+            </div>
+
+            <div>
+              <div>
+                <div>
+                  <img src="" alt="face 1" />
+                </div>
+                <div>
+                  <div>
+                    <p>Luca Ryan</p>
+                  </div>
+                  <div class="comments_text">
+                    <p>Has anyone already applied? Have you received it?</p>
+                  </div>
+                </div>
+                <div class="emoji_evaluation">
+                  <img src="assets/like.png" alt="emoji" />
+                  <p class="like-count">231</p>
+                </div>
+              </div>
+              <div class="evaluation_unit">
+                <p>6 hr</p>
+                <button class="like-button">Like</button>
+                <p>Comment</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer></footer>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
     <script src="assets/main.js"></script>
   </body>
 </html>
