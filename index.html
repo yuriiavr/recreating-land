@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="assets/styles.css" />
     <link rel="stylesheet" href="assets/timer.css" />
+    <link rel="stylesheet" href="assets/comments.css">
   </head>
   <body>
     <style>
@@ -20,61 +21,10 @@
       }
     </style>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
         const prod = "Назва продукта";
         const shop = "Назва магазина";
         const price = "Ціна";
-
-        const questionLang = "Вопрос";
-        const ofLang = "из"
-
-
-        const questions = [
-          "Are you from the US?",
-          `Did you buy something at ${shop}?`,
-          `Would you like to take part in ${prod}?`,
-        ];
-
-        const translations = {
-          timerTitle: 'Времени осталось:',
-          titleText: "Поздравляем!",
-          h1: "Поздравляем!",
-          h1_p: `Вы были выбраны для участия в акции от ${shop}. У вас есть шанс выиграть ${prod} всего за ${price}!`,
-          h1_p2: `Если вы хотите получить ${prod}, вам нужно пройти опрос, чтобы подтвердить, что вы настоящий человек.`,
-          h1_p3: "Поторопитесь, количество лотов ограничено!",
-          questionsNmb: `Вопрос 1 из 3`,
-          yesBtn: 'Да',
-          noBtn: 'Нет',
-        };
-
-        for (const [id, text] of Object.entries(translations)) {
-          let element = document.getElementById(id);
-          if (element) {
-            element.innerHTML = text;
-          }
-        }
-
-        let currentQuestionIndex = 0;
-
-        const questionText = document.getElementById("questionText");
-        const questionNumber = document.getElementById("questionsNmb");
-        const mainSection = document.getElementById("main-section");
-        const boxSection = document.getElementById("box-section");
-
-        document.querySelectorAll(".answerBtn").forEach((button) => {
-          button.addEventListener("click", function () {
-            currentQuestionIndex++;
-            if (currentQuestionIndex < questions.length) {
-              questionNumber.textContent = `${questionLang} ${
-                currentQuestionIndex + 1
-              } ${ofLang} 3`;
-              questionText.textContent = questions[currentQuestionIndex];
-            } else {
-              mainSection.style.display = "none";
-            }
-          });
-        });
-      });
+        const country = "Країна";
     </script>
 
     <header class="header">
@@ -170,18 +120,29 @@
               Combo Kit for only 9.95$!
             </p>
           </div>
-          <img src="assets/product.png" alt="main product" width="500" height="500" class="banner-img" />
+          <img
+            src="assets/product.png"
+            alt="main product"
+            width="500"
+            height="500"
+            class="banner-img"
+          />
           <div class="banner-subtitle-cont">
             <p id="h1_p2">
-              If you want your Milwaukee M18 18V Lithium-Ion Cordless Combo Kit ,
-              you'll have to take a survey to confirm that you're a real person.
+              If you want your Milwaukee M18 18V Lithium-Ion Cordless Combo Kit
+              , you'll have to take a survey to confirm that you're a real
+              person.
             </p>
             <p id="h1_p3">Hurry, the number of lots is limited!</p>
           </div>
           <div>
             <div id="questionContainer">
-              <span class="question-number" id="questionsNmb">Question 1 of 3</span>
-              <span class="question" id="questionText">Are you from the US?</span>
+              <span class="question-number" id="questionsNmb"
+                >Question 1 of 3</span
+              >
+              <span class="question" id="questionText"
+                >Are you from the US?</span
+              >
             </div>
             <div class="button-cont">
               <button id="yesBtn" class="answerBtn">Yes</button>
@@ -192,62 +153,29 @@
       </section>
       <section id="box-section"></section>
 
-      <section>
-        <div>
-          <div>
-            <h2 id="commentsHeader">Comments:</h2>
-          </div>
-
-          <div>
-            <div>
-              <div>
-                <form>
-                  <img src="" alt="avatar hover" />
-                  <div>
-                    <div>
-                      <textarea name="" id=""></textarea>
+      <section id="visible_comments">
+        <div class="container">
+            <div class="comment_header">
+                <h2 id="commentsHeader">Comments:</h2>
+            </div>
+            <div class="wrapp_comment_input">
+              <img src="assets/photo_plug.png" alt="photo plug">
+                <form class="comment_input" id="commentForm">
+                   
+                    <div class="comment_form">
+                        <div class="width_input_comment">
+                            <textarea class="comment_text_input" id="commentBody" placeholder="Your comment"></textarea>
+                        </div>
+                        <div class="margin_button_comment">
+                            <button class="comment_button" type="submit">Send</button>
+                        </div>
                     </div>
-                    <div>
-                      <button id="sendBtn">Send</button>
-                    </div>
-                  </div>
                 </form>
-              </div>
             </div>
-          </div>
-
-          <div>
-            <div>
-              <ul></ul>
-            </div>
-
-            <div>
-              <div>
-                <div>
-                  <img src="" alt="face 1" />
-                </div>
-                <div>
-                  <div>
-                    <p>Luca Ryan</p>
-                  </div>
-                  <div class="comments_text">
-                    <p>Has anyone already applied? Have you received it?</p>
-                  </div>
-                </div>
-                <div class="emoji_evaluation">
-                  <img src="assets/like.png" alt="emoji" />
-                  <p class="like-count">231</p>
-                </div>
-              </div>
-              <div class="evaluation_unit">
-                <p>6 hr</p>
-                <button class="like-button">Like</button>
-                <p>Comment</p>
-              </div>
-            </div>
-          </div>
+            <div id="commentsContainer"></div>
         </div>
-      </section>
+    </section>
+    
     </main>
 
     <footer></footer>
@@ -255,5 +183,6 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
     <script src="assets/main.js"></script>
+    <script src="assets/timer.js"></script>
   </body>
 </html>

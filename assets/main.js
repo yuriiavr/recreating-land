@@ -1,140 +1,212 @@
-var Countdown = {
-  
-    // Backbone-like structure
-    $el: $('.countdown'),
-    
-    // Params
-    countdown_interval: null,
-    total_seconds     : 0,
-    
-    // Initialize the countdown  
-    init: function() {
-      
-      // DOM
-          this.$ = {
-          hours  : this.$el.find('.bloc-time.hours .figure'),
-          minutes: this.$el.find('.bloc-time.min .figure'),
-          seconds: this.$el.find('.bloc-time.sec .figure')
-         };
-  
-      // Init countdown values
-      this.values = {
-            hours  : this.$.hours.parent().attr('data-init-value'),
-          minutes: this.$.minutes.parent().attr('data-init-value'),
-          seconds: this.$.seconds.parent().attr('data-init-value'),
-      };
-      
-      // Initialize total seconds
-      this.total_seconds = this.values.hours * 60 * 60 + (this.values.minutes * 60) + this.values.seconds;
-  
-      // Animate countdown to the end 
-      this.count();    
-    },
-    
-    count: function() {
-      
-      var that    = this,
-          $hour_1 = this.$.hours.eq(0),
-          $hour_2 = this.$.hours.eq(1),
-          $min_1  = this.$.minutes.eq(0),
-          $min_2  = this.$.minutes.eq(1),
-          $sec_1  = this.$.seconds.eq(0),
-          $sec_2  = this.$.seconds.eq(1);
-      
-          this.countdown_interval = setInterval(function() {
-  
-          if(that.total_seconds > 0) {
-  
-              --that.values.seconds;              
-  
-              if(that.values.minutes >= 0 && that.values.seconds < 0) {
-  
-                  that.values.seconds = 59;
-                  --that.values.minutes;
-              }
-  
-              if(that.values.hours >= 0 && that.values.minutes < 0) {
-  
-                  that.values.minutes = 59;
-                  --that.values.hours;
-              }
-  
-              // Update DOM values
-              // Hours
-              that.checkHour(that.values.hours, $hour_1, $hour_2);
-  
-              // Minutes
-              that.checkHour(that.values.minutes, $min_1, $min_2);
-  
-              // Seconds
-              that.checkHour(that.values.seconds, $sec_1, $sec_2);
-  
-              --that.total_seconds;
-          }
-          else {
-              clearInterval(that.countdown_interval);
-          }
-      }, 1000);    
-    },
-    
-    animateFigure: function($el, value) {
-      
-       var that         = this,
-               $top         = $el.find('.top'),
-           $bottom      = $el.find('.bottom'),
-           $back_top    = $el.find('.top-back'),
-           $back_bottom = $el.find('.bottom-back');
-  
-      // Before we begin, change the back value
-      $back_top.find('span').html(value);
-  
-      // Also change the back bottom value
-      $back_bottom.find('span').html(value);
-  
-      // Then animate
-      TweenMax.to($top, 0.8, {
-          rotationX           : '-180deg',
-          transformPerspective: 300,
-            ease                : Quart.easeOut,
-          onComplete          : function() {
-  
-              $top.html(value);
-  
-              $bottom.html(value);
-  
-              TweenMax.set($top, { rotationX: 0 });
-          }
-      });
-  
-      TweenMax.to($back_top, 0.8, { 
-          rotationX           : 0,
-          transformPerspective: 300,
-            ease                : Quart.easeOut, 
-          clearProps          : 'all' 
-      });    
-    },
-    
-    checkHour: function(value, $el_1, $el_2) {
-      
-      var val_1       = value.toString().charAt(0),
-          val_2       = value.toString().charAt(1),
-          fig_1_value = $el_1.find('.top').html(),
-          fig_2_value = $el_2.find('.top').html();
-  
-      if(value >= 10) {
-  
-          // Animate only if the figure has changed
-          if(fig_1_value !== val_1) this.animateFigure($el_1, val_1);
-          if(fig_2_value !== val_2) this.animateFigure($el_2, val_2);
-      }
-      else {
-  
-          // If we are under 10, replace first figure with 0
-          if(fig_1_value !== '0') this.animateFigure($el_1, 0);
-          if(fig_2_value !== val_1) this.animateFigure($el_2, val_1);
-      }    
+document.addEventListener("DOMContentLoaded", async function () {
+  const browserLang = navigator.language.split("-")[0];
+  const supportedLangs = ["en", "ru", "uk"];
+  const savedLang = localStorage.getItem("lang");
+
+  let lang = savedLang || (supportedLangs.includes(browserLang) ? browserLang : "en");
+  localStorage.setItem("lang", lang);
+
+  try {
+    const response = await fetch("assets/translations.json"); // замінити на CDN
+    const translations = await response.json();
+
+    if (!translations[lang]) {
+      console.warn(`Language ${lang} not found in translations.json, defaulting to English`);
+      lang = "en";
     }
+
+    const texts = translations[lang];
+
+    if (texts) {
+      for (const [id, text] of Object.entries(texts)) {
+        let element = document.getElementById(id);
+        if (element) {
+          element.innerHTML = text
+            .replace(/\${prod}/g, prod)
+            .replace(/\${shop}/g, shop)
+            .replace(/\${price}/g, price)
+        }
+      }
+
+      let questions = texts.questions.map((q) =>
+        q.replace(/\${prod}/g, prod).replace(/\${shop}/g, shop).replace(/\${country}/g, country)
+      );
+
+      let currentQuestionIndex = 0;
+      const questionText = document.getElementById("questionText");
+      const questionNumber = document.getElementById("questionsNmb");
+      const mainSection = document.getElementById("main-section");
+
+      questionText.textContent = questions[0];
+      questionNumber.textContent = texts.questionsNmb.replace("1", "1");
+
+      document.querySelectorAll(".answerBtn").forEach((button) => {
+        button.addEventListener("click", function () {
+          currentQuestionIndex++;
+          if (currentQuestionIndex < questions.length) {
+            questionNumber.textContent = `${texts.questionsNmb.replace(
+              "1",
+              currentQuestionIndex + 1
+            )}`;
+            questionText.textContent = questions[currentQuestionIndex];
+          } else {
+            mainSection.style.display = "none";
+          }
+        });
+      });
+    }
+  } catch (error) {
+    console.error("Error loading translations:", error);
+  }
+
+  loadComments(lang);
+});
+
+async function loadComments(lang) {
+  try {
+    const response = await fetch("assets/translateComments.json"); // замінити на CDN
+    const translations = await response.json();
+
+    if (!translations[lang]) {
+      console.warn(`Language ${lang} not found in translateComments.json, defaulting to English`);
+      lang = "en";
+    }
+
+    const texts = translations[lang];
+
+    if (!texts || !texts.comments) {
+      console.error(`Missing comments for language ${lang}`);
+      return;
+    }
+
+    const commentsContainer = document.getElementById("commentsContainer");
+    commentsContainer.innerHTML = "";
+
+    document.getElementById("commentsHeader").textContent = texts.commentsHeader;
+
+    window.commentTranslations = {
+      like: texts.like,
+      commentLang: texts.commentLang
+    };
+
+    texts.comments.forEach(comment => {
+      const formattedComment = {
+        ...comment,
+        text: comment.text
+          .replace(/\${shop}/g, shop),
+        replies: comment.replies
+          ? comment.replies.map(reply => ({
+              ...reply,
+              text: reply.text
+                .replace(/\${shop}/g, shop),
+              username: reply.username.replace(/\${shop}/g, shop)
+            }))
+          : []
+      };
+    
+      const commentElement = createCommentHTML(formattedComment);
+      commentsContainer.appendChild(commentElement);
+    });
+    
+  } catch (error) {
+    console.error("Error loading comments:", error);
+  }
+}
+
+function createCommentHTML(comment) {
+  const commentDiv = document.createElement("div");
+  commentDiv.classList.add("comment-block");
+  commentDiv.innerHTML = `
+      <div class="comments_item">
+          <div class="comment_images">
+              <img src="${comment.avatar}" alt="${comment.username}" class="comment-avatar">
+          </div>
+          <div class="comment_text_wrapp">
+              <div class="person_name"><p>${comment.username}</p></div>
+              <div class="comments_text"><p>${comment.text}</p></div>
+              ${comment.image ? `<img src="${comment.image}" alt="comment image" class="comment-image">` : ""}
+          </div>
+          <div class="emoji_evaluation">
+              <img src="assets/like.png" alt="like icon" class="like-icon">
+              <p class="like-count">${comment.likes}</p>
+          </div>
+      </div>
+      <div class="evaluation_unit">
+          <p>${comment.time}</p>
+          <button class="like-button">${window.commentTranslations.like}</button>
+          <p>${window.commentTranslations.commentLang}</p>
+      </div>
+      <div class="first_response"></div>
+  `;
+
+  const likeButton = commentDiv.querySelector(".like-button");
+  const likeCount = commentDiv.querySelector(".like-count");
+  let isLiked = false;
+
+  likeButton.addEventListener("click", function () {
+      let currentLikes = parseInt(likeCount.textContent, 10);
+      if (isLiked) {
+          likeCount.textContent = currentLikes - 1;
+          likeButton.classList.remove("liked");
+      } else {
+          likeCount.textContent = currentLikes + 1;
+          likeButton.classList.add("liked");
+      }
+      isLiked = !isLiked;
+  });
+
+  const repliesContainer = commentDiv.querySelector(".first_response");
+  if (comment.replies) {
+      comment.replies.forEach(reply => {
+          repliesContainer.appendChild(createCommentHTML(reply));
+      });
+  }
+
+  return commentDiv;
+}
+
+
+function addCommentToPage(comment, saveToStorage = false) {
+  const commentsContainer = document.getElementById("commentsContainer");
+  const commentElement = createCommentHTML(comment);
+  commentsContainer.prepend(commentElement);
+
+  if (saveToStorage) {
+      saveCommentToLocalStorage(comment);
+  }
+}
+
+function loadStoredComments() {
+  const storedComments = JSON.parse(localStorage.getItem("comments")) || [];
+  storedComments.forEach(comment => {
+      addCommentToPage(comment);
+  });
+}
+
+function saveCommentToLocalStorage(comment) {
+  let comments = JSON.parse(localStorage.getItem("comments")) || [];
+  comments.unshift(comment);
+  localStorage.setItem("comments", JSON.stringify(comments));
+}
+
+document.getElementById("commentForm").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const commentText = document.getElementById("commentBody").value.trim();
+  if (commentText === "") return;
+
+  const newComment = {
+      username: "New User",
+      avatar: "assets/photo_plug.png",
+      text: commentText,
+      likes: 0,
+      time: "Just now",
+      replies: []
   };
-  
-  // Let's go !
-  Countdown.init();
+
+  const commentsContainer = document.getElementById("commentsContainer");
+  const newCommentElement = createCommentHTML(newComment);
+  commentsContainer.prepend(newCommentElement); 
+
+  document.getElementById("commentBody").value = ""; 
+});

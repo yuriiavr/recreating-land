@@ -1,0 +1,51 @@
+{
+    "en": {
+      "timerTitle": "Time remaining:",
+      "titleText": "Congratulations!",
+      "h1": "Congratulations!",
+      "h1_p": "You have been selected to participate in the promotion from ${shop}. You have a chance to win ${prod} for only ${price}!",
+      "h1_p2": "If you want to receive ${prod}, you need to complete the survey to confirm you are a real person.",
+      "h1_p3": "Hurry up, the number of lots is limited!",
+      "questionsNmb": "Question 1 of 3",
+      "yesBtn": "Yes",
+      "noBtn": "No",
+      "questions": [
+        "Are you from the ${country}?",
+        "Did you buy something at ${shop}?",
+        "Would you like to take part in ${prod}?"
+      ]
+    },
+    "ru": {
+      "timerTitle": "Времени осталось:",
+      "titleText": "Поздравляем!",
+      "h1": "Поздравляем!",
+      "h1_p": "Вы были выбраны для участия в акции от ${shop}. У вас есть шанс выиграть ${prod} всего за ${price}!",
+      "h1_p2": "Если вы хотите получить ${prod}, вам нужно пройти опрос, чтобы подтвердить, что вы настоящий человек.",
+      "h1_p3": "Поторопитесь, количество лотов ограничено!",
+      "questionsNmb": "Вопрос 1 из 3",
+      "yesBtn": "Да",
+      "noBtn": "Нет",
+      "questions": [
+        "Вы из ${country}?",
+        "Вы что-то покупали в ${shop}?",
+        "Хотите принять участие в ${prod}?"
+      ]
+    },
+    "uk": {
+      "timerTitle": "Часу залишилось:",
+      "titleText": "Вітаємо!",
+      "h1": "Вітаємо!",
+      "h1_p": "Вас обрали для участі в акції від ${shop}. У вас є шанс виграти ${prod} всього за ${price}!",
+      "h1_p2": "Якщо ви хочете отримати ${prod}, вам потрібно пройти опитування, щоб підтвердити, що ви реальна людина.",
+      "h1_p3": "Поспішайте, кількість лотів обмежена!",
+      "questionsNmb": "Питання 1 з 3",
+      "yesBtn": "Так",
+      "noBtn": "Ні",
+      "questions": [
+        "Ви з ${country}?",
+        "Ви щось купували в ${shop}?",
+        "Хочете взяти участь у ${prod}?"
+      ]
+    }
+  }
+  
