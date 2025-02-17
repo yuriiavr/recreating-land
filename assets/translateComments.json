@@ -25,6 +25,13 @@
                         "image": "assets/comment-prize1.jpg",
                         "likes": 126,
                         "time": "40 min"
+                    },
+                    {
+                        "username": "${shop} Support",
+                        "avatar": "assets/mini-logo.png",
+                        "text": "Thanks for your comments!",
+                        "likes": 145,
+                        "time": "15 min"
                     }
                 ]
             },
