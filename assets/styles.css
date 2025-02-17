@@ -68,3 +68,27 @@ img{
     max-width: 500px;
     margin: 0 auto;
 }
+
+.banner-subtitle-cont{
+    margin-bottom: 20px;
+}
+
+.question-number{
+    font-weight: bold;
+}
+
+.answerBtn{
+    background-color: var(--button-color);
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px 0;
+    color: #fff;
+}
+
+.button-cont{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-top: 10px;
+}

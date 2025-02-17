@@ -12,7 +12,7 @@
     <style>
       :root {
         --bg_color_header: transparent;
-        --main_button_color: #ff6600;
+        --button-color: #ff6600;
         --main_button_hover: #bf4e02;
         --bg_color_footer: #000;
         --bg_color_timer: black;
@@ -25,6 +25,10 @@
         const shop = "Назва магазина";
         const price = "Ціна";
 
+        const questionLang = "Вопрос";
+        const ofLang = "из"
+
+
         const questions = [
           "Are you from the US?",
           `Did you buy something at ${shop}?`,
@@ -32,11 +36,15 @@
         ];
 
         const translations = {
+          timerTitle: 'Времени осталось:',
           titleText: "Поздравляем!",
           h1: "Поздравляем!",
           h1_p: `Вы были выбраны для участия в акции от ${shop}. У вас есть шанс выиграть ${prod} всего за ${price}!`,
           h1_p2: `Если вы хотите получить ${prod}, вам нужно пройти опрос, чтобы подтвердить, что вы настоящий человек.`,
           h1_p3: "Поторопитесь, количество лотов ограничено!",
+          questionsNmb: `Вопрос 1 из 3`,
+          yesBtn: 'Да',
+          noBtn: 'Нет',
         };
 
         for (const [id, text] of Object.entries(translations)) {
@@ -57,9 +65,9 @@
           button.addEventListener("click", function () {
             currentQuestionIndex++;
             if (currentQuestionIndex < questions.length) {
-              questionNumber.textContent = `Question ${
+              questionNumber.textContent = `${questionLang} ${
                 currentQuestionIndex + 1
-              } of 3`;
+              } ${ofLang} 3`;
               questionText.textContent = questions[currentQuestionIndex];
             } else {
               mainSection.style.display = "none";
@@ -72,7 +80,7 @@
     <header class="header">
       <img src="assets/logo.png" alt="logo" width="320" class="logo" />
       <div class="block_timer">
-        <p>Time remaining:</p>
+        <p id="timerTitle">Time remaining:</p>
         <div class="wrap">
           <div class="countdown">
             <div class="bloc-time hours" data-init-value="0">
@@ -163,7 +171,7 @@
             </p>
           </div>
           <img src="assets/product.png" alt="main product" width="500" height="500" class="banner-img" />
-          <div>
+          <div class="banner-subtitle-cont">
             <p id="h1_p2">
               If you want your Milwaukee M18 18V Lithium-Ion Cordless Combo Kit ,
               you'll have to take a survey to confirm that you're a real person.
@@ -172,12 +180,12 @@
           </div>
           <div>
             <div id="questionContainer">
-              <span id="questionsNmb">Question 1 of 3</span>
-              <span id="questionText">Are you from the US?</span>
+              <span class="question-number" id="questionsNmb">Question 1 of 3</span>
+              <span class="question" id="questionText">Are you from the US?</span>
             </div>
-            <div>
-              <button class="answerBtn">Yes</button>
-              <button class="answerBtn">No</button>
+            <div class="button-cont">
+              <button id="yesBtn" class="answerBtn">Yes</button>
+              <button id="noBtn" class="answerBtn">No</button>
             </div>
           </div>
         </div>
