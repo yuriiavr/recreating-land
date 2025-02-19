@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             .replace(/\${prod}/g, prod)
             .replace(/\${shop}/g, shop)
             .replace(/\${price}/g, price)
+            .replace(/\${shopLink}/g, shopLink)
         }
       }
 
@@ -206,3 +207,42 @@ document.getElementById("commentForm").addEventListener("submit", function (even
   document.getElementById("commentBody").value = ""; 
 });
 
+//FAQ
+//Open FAQ
+$('.faq_icon_open').on('click', function(){
+  $('#faq_cont').fadeIn(300);
+  $('.faq_icon_open').fadeOut();
+})
+//Close FAQ
+$('.close_faq_icon').on('click', function(){
+  $('#faq_cont').fadeOut(300);
+  $('.faq_icon_open').fadeIn();
+})
+//поведение faq
+$('.faq_question').on('click', function(){
+  var clickedHeader = $(this);
+  var clickedText = clickedHeader.next('.faq_answer');
+
+  // Закрыть все остальные блоки, кроме текущего
+  $('.faq_question').not(clickedHeader).removeClass('active focus_accordion');
+  $('.faq_answer').not(clickedText).slideUp();
+
+  // Переключить состояние текущего блока
+  clickedHeader.toggleClass('active').toggleClass('focus_accordion');
+  clickedText.slideToggle();
+});
+
+// Privacy Policy
+
+$('.close_modal').on('click', function(){
+  $('#visib_modal_first').fadeOut(600);
+});
+$('.close_second').on('click', function(){
+  $('#visib_modal_second').fadeOut(600);
+});
+$('#openPolicy').on('click', function(){
+  $('.pp-wrap').fadeIn(300);
+})
+$('#close-policy').on('click', function(){
+  $('.pp-wrap').fadeOut(300);
+})

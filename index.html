@@ -7,11 +7,15 @@
 
     <link rel="stylesheet" href="assets/styles.css" />
     <link rel="stylesheet" href="assets/timer.css" />
-    <link rel="stylesheet" href="assets/comments.css">
+    <link rel="stylesheet" href="assets/comments.css" />
+    <link rel="stylesheet" href="assets/faq.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <style>
@@ -25,10 +29,11 @@
       }
     </style>
     <script>
-        const prod = "Назва продукта";
-        const shop = "Назва магазина";
-        const price = "Ціна";
-        const country = "Країна";
+      const prod = "PS5";
+      const shop = "Amazon";
+      const price = "1.95$";
+      const country = "US";
+      const shopLink = shop.toLowerCase().replace(/\s+/g, '');
     </script>
 
     <header class="header">
@@ -131,6 +136,13 @@
             height="500"
             class="banner-img"
           />
+          <div class="faq_ratings_icon">
+            <img
+              class="faq_icon_open"
+              src="assets/faq_icon.png"
+              alt="faq icon"
+            />
+          </div>
           <div class="banner-subtitle-cont">
             <p id="h1_p2">
               If you want your Milwaukee M18 18V Lithium-Ion Cordless Combo Kit
@@ -155,39 +167,137 @@
           </div>
         </div>
       </section>
-      
-      <section id="box-section">
 
-      </section>
+      <section id="box-section"></section>
 
       <section id="visible_comments">
         <div class="container">
-            <div class="comment_header">
-                <h2 id="commentsHeader">Comments:</h2>
-            </div>
-            <div class="wrapp_comment_input">
-              <img src="assets/photo_plug.png" alt="photo plug">
-                <form class="comment_input" id="commentForm">
-                   
-                    <div class="comment_form">
-                        <div class="width_input_comment">
-                            <textarea class="comment_text_input" id="commentBody" placeholder="Your comment"></textarea>
-                        </div>
-                        <div class="margin_button_comment">
-                            <button id="send" class="comment_button" type="submit">Send</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div id="commentsContainer"></div>
+          <div class="comment_header">
+            <h2 id="commentsHeader">Comments:</h2>
+          </div>
+          <div class="wrapp_comment_input">
+            <img src="assets/photo_plug.png" alt="photo plug" />
+            <form class="comment_input" id="commentForm">
+              <div class="comment_form">
+                <div class="width_input_comment">
+                  <textarea
+                    class="comment_text_input"
+                    id="commentBody"
+                    placeholder="Your comment"
+                  ></textarea>
+                </div>
+                <div class="margin_button_comment">
+                  <button id="send" class="comment_button" type="submit">
+                    Send
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div id="commentsContainer"></div>
         </div>
       </section>
 
-      <section id="faq"></section>
-    
+      <section id="faq_cont">
+        <div class="wrapp_faq">
+          <div class="header_faq">
+            <h2 id="faqTitle">Frequently asked questions</h2>
+            <img
+              class="close_faq_icon"
+              src="assets/close_modal.png"
+              alt="close faq"
+            />
+          </div>
+          <div class="faq_wrapp_item">
+            <div class="faq_question">
+              <p id="fq1">How long will I have to wait for my reward?</p>
+            </div>
+            <div class="faq_answer">
+              <p id="fa1">This usually takes 4 to 5 working days.</p>
+            </div>
+          </div>
+          <div class="faq_wrapp_item">
+            <div class="faq_question">
+              <p id="fq2">Are there any hidden charges?</p>
+            </div>
+            <div class="faq_answer">
+              <p id="fa2">
+                No. As soon as you win a prize and enter your details, we'll
+                take care of the rest. Postage is on us!
+              </p>
+            </div>
+          </div>
+          <div class="faq_wrapp_item">
+            <div class="faq_question">
+              <p id="fq3">
+                I'm a winner, why should I answer questions / guess the box?
+              </p>
+            </div>
+            <div class="faq_answer">
+              <p id="fa3">
+                You're not a winner yet, but you're one of the 10 people
+                selected for a chance to win our prize.
+              </p>
+            </div>
+          </div>
+          <div class="faq_wrapp_item">
+            <div class="faq_question">
+              <p id="fq4">How do I get a prize if I win?</p>
+            </div>
+            <div class="faq_answer">
+              <p id="fa4">
+                First you have to enter your shipping address and contact
+                information. Then our system will ask you. Then you must prove
+                that you are a real person, because the prize is for a real
+                person.
+              </p>
+            </div>
+          </div>
+          <div class="faq_wrapp_item">
+            <div class="faq_question">
+              <p id="fq5">Why should I pay 9.95$ for a prize?</p>
+            </div>
+            <div class="faq_answer">
+              <p id="fa5">
+                The 9.95$ is not a price, it's a reserve to prove you're really
+                human. ALL payments will be refunded upon approval.
+              </p>
+            </div>
+          </div>
+          <div class="faq_wrapp_item">
+            <div class="faq_question">
+              <p id="fq6">
+                I can't use my credit card, has the transaction failed?
+              </p>
+            </div>
+            <div class="faq_answer">
+              <p id="fa6">
+                If you can't use your credit card, it means your bank is
+                blocking your account: you need to check your account.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer></footer>
+    <footer class="footer">
+      <span class="footer-item" id="shopLink">.com or its subsidiaries</span>
+      <span class="footer-item" id="openPolicy">Privacy policy</span>
+      <span class="footer-item" id="repAbuse">Report abuse</span>
+
+      <div class="pp-wrap">
+        <div class="overlay"></div>
+        <div class="wrapp-policy">
+            <h2 id="policy">Privacy policy</h2>
+            <p><img id="close-policy" src="assets/close_modal.png" alt="close icon"></p>
+            <div class="policy-description">
+                <p id="policyContent">
+                </p>
+            </div>
+        </div>
+    </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
