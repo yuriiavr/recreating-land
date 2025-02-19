@@ -13,7 +13,9 @@
         "Are you from the ${country}?",
         "Did you buy something at ${shop}?",
         "Would you like to take part in ${prod}?"
-      ]
+      ],
+      "placeholder": "Your comment",
+      "send": "Send"
     },
     "ru": {
       "timerTitle": "Времени осталось:",
@@ -29,7 +31,9 @@
         "Вы из ${country}?",
         "Вы что-то покупали в ${shop}?",
         "Хотите принять участие в ${prod}?"
-      ]
+      ],
+      "placeholder": "Ваш комментарий",
+      "send": "Отправить"
     },
     "uk": {
       "timerTitle": "Часу залишилось:",
@@ -45,7 +49,9 @@
         "Ви з ${country}?",
         "Ви щось купували в ${shop}?",
         "Хочете взяти участь у ${prod}?"
-      ]
+      ],
+      "placeholder": "Ваш коментар",
+      "send": "Відправити"
     }
   }
   

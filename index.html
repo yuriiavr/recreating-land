@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="assets/styles.css" />
     <link rel="stylesheet" href="assets/timer.css" />
     <link rel="stylesheet" href="assets/comments.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
   </head>
   <body>
     <style>
@@ -151,7 +155,10 @@
           </div>
         </div>
       </section>
-      <section id="box-section"></section>
+      
+      <section id="box-section">
+
+      </section>
 
       <section id="visible_comments">
         <div class="container">
@@ -167,14 +174,16 @@
                             <textarea class="comment_text_input" id="commentBody" placeholder="Your comment"></textarea>
                         </div>
                         <div class="margin_button_comment">
-                            <button class="comment_button" type="submit">Send</button>
+                            <button id="send" class="comment_button" type="submit">Send</button>
                         </div>
                     </div>
                 </form>
             </div>
             <div id="commentsContainer"></div>
         </div>
-    </section>
+      </section>
+
+      <section id="faq"></section>
     
     </main>
 

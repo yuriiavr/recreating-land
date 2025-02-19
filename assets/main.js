@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", async function () {
   const browserLang = navigator.language.split("-")[0];
-  const supportedLangs = ["en", "ru", "uk"];
+  const supportedLangs = ["en", "ru", "fr", "es", "it", "uk", "fi", "nl", "pl", "sl", "sk", "de", "sr", "cs", "da", "lb", "tr", "no", "hu", "el", "sv", "lt", "lv", "ro", "hy", "bg", "az", "mk", "ar", "he"];
   const savedLang = localStorage.getItem("lang");
 
   let lang = savedLang || (supportedLangs.includes(browserLang) ? browserLang : "en");
@@ -16,6 +16,11 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
 
     const texts = translations[lang];
+
+    const commentInput = document.getElementById("commentBody");
+    if (commentInput) {
+      commentInput.placeholder = texts.placeholder;
+    }
 
     if (texts) {
       for (const [id, text] of Object.entries(texts)) {
@@ -64,11 +69,11 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 async function loadComments(lang) {
   try {
-    const response = await fetch("assets/translateComments.json"); // замінити на CDN
+    const response = await fetch("https://eae44083.comment-text-for-land.pages.dev/comment_text.json"); // замінити на CDN
     const translations = await response.json();
 
     if (!translations[lang]) {
-      console.warn(`Language ${lang} not found in translateComments.json, defaulting to English`);
+      console.warn(`Language ${lang} not found in translation, defaulting to English`);
       lang = "en";
     }
 
@@ -166,7 +171,7 @@ function createCommentHTML(comment) {
 }
 
 
-function addCommentToPage(comment, saveToStorage = false) {
+function addCommentToPage(comment, saveToStorage) {
   const commentsContainer = document.getElementById("commentsContainer");
   const commentElement = createCommentHTML(comment);
   commentsContainer.prepend(commentElement);
@@ -174,13 +179,6 @@ function addCommentToPage(comment, saveToStorage = false) {
   if (saveToStorage) {
       saveCommentToLocalStorage(comment);
   }
-}
-
-function loadStoredComments() {
-  const storedComments = JSON.parse(localStorage.getItem("comments")) || [];
-  storedComments.forEach(comment => {
-      addCommentToPage(comment);
-  });
 }
 
 function saveCommentToLocalStorage(comment) {
@@ -204,9 +202,7 @@ document.getElementById("commentForm").addEventListener("submit", function (even
       replies: []
   };
 
-  const commentsContainer = document.getElementById("commentsContainer");
-  const newCommentElement = createCommentHTML(newComment);
-  commentsContainer.prepend(newCommentElement); 
-
+  addCommentToPage(newComment, true);
   document.getElementById("commentBody").value = ""; 
 });
+

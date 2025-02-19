@@ -72,7 +72,6 @@
 }
 .emoji_evaluation {
     position: relative;
-    width: 53px;
     background-color: white;
     right: 14px;
     bottom: 10px;
@@ -96,6 +95,7 @@
     font-size: 11px;
     margin: 0 0 0 2px;
     opacity: .6;
+    font-family: "Atkinson Hyperlegible Next", serif;
 }
 .comment_text_wrapp {
     background-color: #EBEDF1;
@@ -133,6 +133,7 @@
     font-size: 14px;
     opacity: .6;
     display: inline;
+    font-family: "Atkinson Hyperlegible Next", serif;
 }
 .comments_text > img {
     margin-top: 10px;
@@ -181,9 +182,13 @@
     opacity: 0.6;
     display: inline;
     cursor: pointer;
-    margin-left: 20px;
-    margin-bottom: 10px;
     color: black;
+    margin-top: 4px;
+    margin-left: 20px;
+    font-size: 14px;
+    opacity: .6;
+    display: inline;
+    font-family: "Atkinson Hyperlegible Next", serif;
 }
 
 .like-button:hover {
