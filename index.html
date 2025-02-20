@@ -29,11 +29,13 @@
       }
     </style>
     <script>
-      const prod = "PS5";
+      const prod = "Iphone 16 PRO";
       const shop = "Amazon";
       const price = "1.95$";
       const country = "US";
-      const shopLink = shop.toLowerCase().replace(/\s+/g, '');
+      const shopLink = shop.toLowerCase().replace(/\s+/g, "");
+      const prodLink = prod.toLowerCase().replace(/\s+/g, "");
+
     </script>
 
     <header class="header">
@@ -130,7 +132,8 @@
             </p>
           </div>
           <img
-            src="assets/product.png"
+            id="mainProd"
+            src=""
             alt="main product"
             width="500"
             height="500"
@@ -289,14 +292,19 @@
       <div class="pp-wrap">
         <div class="overlay"></div>
         <div class="wrapp-policy">
-            <h2 id="policy">Privacy policy</h2>
-            <p><img id="close-policy" src="assets/close_modal.png" alt="close icon"></p>
-            <div class="policy-description">
-                <p id="policyContent">
-                </p>
-            </div>
+          <h2 id="policy">Privacy policy</h2>
+          <p>
+            <img
+              id="close-policy"
+              src="assets/close_modal.png"
+              alt="close icon"
+            />
+          </p>
+          <div class="policy-description">
+            <p id="policyContent"></p>
+          </div>
         </div>
-    </div>
+      </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
