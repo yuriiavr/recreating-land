@@ -28,7 +28,7 @@
                     },
                     {
                         "username": "${shop} Support",
-                        "avatar": "assets/mini-logo.png",
+                        "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                         "text": "Thanks for your comments!",
                         "likes": 145,
                         "time": "15 min"
@@ -45,7 +45,7 @@
                 "replies": [
                     {
                         "username": "${shop} Support",
-                        "avatar": "assets/mini-logo.png",
+                        "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                         "text": "Thank you for your comment, it means a lot to us.",
                         "likes": 362,
                         "time": "13 hr"
@@ -68,7 +68,7 @@
                 "replies": [
                     {
                         "username": "${shop} Support",
-                        "avatar": "assets/mini-logo.png",
+                        "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                         "text": "Dear Damon Pugh, we guarantee that you will receive your reward, because the good reputation of our store is proven and indisputable.",
                         "likes": 324,
                         "time": "1 d 8 hr"
@@ -121,7 +121,7 @@
                 },
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Спасибо за ваши комментарии!",
                     "likes": 145,
                     "time": "15 мин"
@@ -138,7 +138,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Спасибо за ваш комментарий, он очень важен для нас.",
                     "likes": 362,
                     "time": "13 ч"
@@ -161,7 +161,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Дорогой Yaroslav Abramowitz, мы гарантируем, что вы получите свою награду, ведь хорошая репутация нашего магазина проверена и неоспорима.",
                     "likes": 324,
                     "time": "1 д 8 ч"
@@ -214,7 +214,7 @@
                 },
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Merci pour vos commentaires !",
                     "likes": 145,
                     "time": "15 min"
@@ -231,7 +231,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Merci pour votre commentaire, cela signifie beaucoup pour nous.",
                     "likes": 362,
                     "time": "13 h"
@@ -254,7 +254,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Cher Tristan Jolicoeur, nous vous garantissons que vous recevrez votre récompense, car la bonne réputation de notre boutique est prouvée et incontestable.",
                     "likes": 324,
                     "time": "1 j 8 h"
@@ -307,7 +307,7 @@
                 },
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "¡Gracias por sus comentarios!",
                     "likes": 145,
                     "time": "15 min"
@@ -324,7 +324,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Gracias por tu comentario, significa mucho para nosotros.",
                     "likes": 362,
                     "time": "13 h"
@@ -347,7 +347,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Estimado Damon Pugh, le garantizamos que recibirá su recompensa, ya que la buena reputación de nuestra tienda está probada e indiscutida.",
                     "likes": 324,
                     "time": "1 d 8 h"
@@ -400,7 +400,7 @@
                 },
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Grazie per i vostri commenti!",
                     "likes": 145,
                     "time": "15 min"
@@ -417,7 +417,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Grazie per il tuo commento, significa molto per noi.",
                     "likes": 362,
                     "time": "13 h"
@@ -440,7 +440,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Caro Salvatore Rizzo, garantiamo che riceverai la tua ricompensa, perché la buona reputazione del nostro negozio è comprovata e indiscutibile.",
                     "likes": 324,
                     "time": "1 g 8 h"
@@ -493,7 +493,7 @@
                 },
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Дякуємо за ваші коментарі!",
                     "likes": 145,
                     "time": "15 хв"
@@ -510,7 +510,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Дякуємо за ваш коментар, це дуже важливо для нас.",
                     "likes": 362,
                     "time": "13 год"
@@ -533,7 +533,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Шановний Damon Pugh, ми гарантуємо, що ви отримаєте свою винагороду, адже хороша репутація нашого магазину перевірена й беззаперечна.",
                     "likes": 324,
                     "time": "1 д 8 год"
@@ -586,7 +586,7 @@
                 },
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Kiitos kommenteistanne!",
                     "likes": 145,
                     "time": "15 min"
@@ -603,7 +603,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Kiitos kommentistasi, se merkitsee meille paljon.",
                     "likes": 362,
                     "time": "13 t"
@@ -626,7 +626,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Hyvä Matias Asplund, takaamme, että saat palkintosi, sillä kauppamme hyvä maine on todistettu ja kiistaton.",
                     "likes": 324,
                     "time": "1 pv 8 t"
@@ -679,7 +679,7 @@
                 },
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Bedankt voor jullie opmerkingen!",
                     "likes": 145,
                     "time": "15 min"
@@ -696,7 +696,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Bedankt voor je opmerking, het betekent veel voor ons.",
                     "likes": 362,
                     "time": "13 u"
@@ -719,7 +719,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Beste Emil Ødegaard, wij garanderen dat u uw beloning zult ontvangen, omdat de goede reputatie van onze winkel bewezen en onbetwistbaar is.",
                     "likes": 324,
                     "time": "1 d 8 u"
@@ -772,7 +772,7 @@
                 },
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Dziękujemy za wasze komentarze!",
                     "likes": 145,
                     "time": "15 min"
@@ -789,7 +789,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Dziękujemy za twój komentarz, to dla nas bardzo ważne.",
                     "likes": 362,
                     "time": "13 godz."
@@ -812,7 +812,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Drogi Drugi Jasiński, gwarantujemy, że otrzymasz swoją nagrodę, ponieważ dobra reputacja naszego sklepu jest potwierdzona i niepodważalna.",
                     "likes": 324,
                     "time": "1 d 8 godz."
@@ -865,7 +865,7 @@
                 },
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Hvala za vaše komentarje!",
                     "likes": 145,
                     "time": "15 min"
@@ -882,7 +882,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Hvala za vaš komentar, veliko nam pomeni.",
                     "likes": 362,
                     "time": "13 h"
@@ -905,7 +905,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Dragi Hugo Plajnšek, zagotavljamo vam, da boste prejeli svojo nagrado, saj je dober ugled naše trgovine dokazan in nesporen.",
                     "likes": 324,
                     "time": "1 d 8 h"
@@ -958,7 +958,7 @@
                 },
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Ďakujeme za vaše komentáre!",
                     "likes": 145,
                     "time": "15 min"
@@ -975,7 +975,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Ďakujeme za váš komentár, veľa to pre nás znamená.",
                     "likes": 362,
                     "time": "13 h"
@@ -998,7 +998,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Vážený Damon Pugh, zaručujeme vám, že dostanete svoju odmenu, pretože dobrá povesť nášho obchodu je preverená a nespochybniteľná.",
                     "likes": 324,
                     "time": "1 d 8 h"
@@ -1051,7 +1051,7 @@
                 },
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Danke für eure Kommentare!",
                     "likes": 145,
                     "time": "15 Min."
@@ -1068,7 +1068,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Danke für deinen Kommentar, das bedeutet uns viel.",
                     "likes": 362,
                     "time": "13 Std."
@@ -1091,7 +1091,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Sehr geehrter Robert Holzman, wir garantieren Ihnen, dass Sie Ihre Belohnung erhalten werden, denn der gute Ruf unseres Geschäfts ist bewiesen und unbestreitbar.",
                     "likes": 324,
                     "time": "1 Tg. 8 Std."
@@ -1144,7 +1144,7 @@
                 },
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Хвала вам на коментарима!",
                     "likes": 145,
                     "time": "15 мин"
@@ -1161,7 +1161,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Хвала вам на коментару, много нам значи.",
                     "likes": 362,
                     "time": "13 ч"
@@ -1184,7 +1184,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Поштовани Damon Pugh, гарантујемо вам да ћете добити своју награду, јер је добра репутација наше продавнице доказана и неспорна.",
                     "likes": 324,
                     "time": "1 д 8 ч"
@@ -1237,7 +1237,7 @@
                 },
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Děkujeme za vaše komentáře!",
                     "likes": 145,
                     "time": "15 min"
@@ -1254,7 +1254,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Děkujeme za váš komentář, znamená to pro nás hodně.",
                     "likes": 362,
                     "time": "13 h"
@@ -1277,7 +1277,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Vážený Jan Čáp, zaručujeme vám, že svou odměnu obdržíte, protože dobrá pověst našeho obchodu je ověřená a nezpochybnitelná.",
                     "likes": 324,
                     "time": "1 d 8 h"
@@ -1330,7 +1330,7 @@
                 },
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Tak for jeres kommentarer!",
                     "likes": 145,
                     "time": "15 min"
@@ -1347,7 +1347,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Tak for din kommentar, det betyder meget for os.",
                     "likes": 362,
                     "time": "13 t"
@@ -1370,7 +1370,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Kære Johan N. Christoffersen, vi garanterer, at du vil modtage din belønning, da vores butiks gode ry er bevist og ubestrideligt.",
                     "likes": 324,
                     "time": "1 d 8 t"
@@ -1423,7 +1423,7 @@
                 },
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Merci fir är Kommentaren!",
                     "likes": 145,
                     "time": "15 min"
@@ -1440,7 +1440,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Merci fir däi Kommentar, et bedeit vill fir eis.",
                     "likes": 362,
                     "time": "13 h"
@@ -1463,7 +1463,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Léif Damon Pugh, mir garantéieren, datt dir är Belounung kritt, well de gudde Ruff vun eisem Buttek bewisen a net ze verleegnen ass.",
                     "likes": 324,
                     "time": "1 d 8 h"
@@ -1516,7 +1516,7 @@
                 },
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Yorumlarınız için teşekkür ederiz!",
                     "likes": 145,
                     "time": "15 dk"
@@ -1533,7 +1533,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Yorumunuz için teşekkür ederiz, bizim için çok anlamlı.",
                     "likes": 362,
                     "time": "13 sa"
@@ -1556,7 +1556,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Sayın Damon Pugh, ödülünüzü alacağınızı garanti ediyoruz, çünkü mağazamızın iyi itibarı kanıtlanmış ve tartışılmazdır.",
                     "likes": 324,
                     "time": "1 g 8 sa"
@@ -1609,7 +1609,7 @@
                 },
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Takk for kommentarene deres!",
                     "likes": 145,
                     "time": "15 min"
@@ -1626,7 +1626,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Takk for kommentaren din, den betyr mye for oss.",
                     "likes": 362,
                     "time": "13 t"
@@ -1649,7 +1649,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Kjære Damon Pugh, vi garanterer at du vil motta belønningen din, for den gode omdømmet til vår butikk er bevist og udiskutabel.",
                     "likes": 324,
                     "time": "1 d 8 t"
@@ -1702,7 +1702,7 @@
                 },
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Köszönjük a hozzászólásokat!",
                     "likes": 145,
                     "time": "15 p"
@@ -1719,7 +1719,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Köszönjük a hozzászólását, ez sokat jelent számunkra.",
                     "likes": 362,
                     "time": "13 ó"
@@ -1742,7 +1742,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Kedves Damon Pugh, garantáljuk, hogy megkapja a jutalmát, mert üzletünk jó hírneve bizonyított és vitathatatlan.",
                     "likes": 324,
                     "time": "1 n 8 ó"
@@ -1795,7 +1795,7 @@
                 },
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Ευχαριστούμε για τα σχόλιά σας!",
                     "likes": 145,
                     "time": "15 λ."
@@ -1812,7 +1812,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Σας ευχαριστούμε για το σχόλιό σας, σημαίνει πολλά για εμάς.",
                     "likes": 362,
                     "time": "13 ώρ."
@@ -1835,7 +1835,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Αγαπητέ Damon Pugh, εγγυόμαστε ότι θα λάβετε την ανταμοιβή σας, καθώς η καλή φήμη του καταστήματός μας είναι αποδεδειγμένη και αδιαμφισβήτητη.",
                     "likes": 324,
                     "time": "1 ημ. 8 ώρ."
@@ -1888,7 +1888,7 @@
                 },
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Tack för era kommentarer!",
                     "likes": 145,
                     "time": "15 min"
@@ -1905,7 +1905,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Tack för din kommentar, det betyder mycket för oss.",
                     "likes": 362,
                     "time": "13 tim"
@@ -1928,7 +1928,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Kära Damon Pugh, vi garanterar att du kommer att få din belöning, eftersom vårt butiks goda rykte är bevisat och obestridligt.",
                     "likes": 324,
                     "time": "1 d 8 tim"
@@ -1981,7 +1981,7 @@
                 },
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Ačiū už jūsų komentarus!",
                     "likes": 145,
                     "time": "15 min."
@@ -1998,7 +1998,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Dėkojame už jūsų komentarą, tai mums labai svarbu.",
                     "likes": 362,
                     "time": "13 val."
@@ -2021,7 +2021,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Gerbiamas Damon Pugh, garantuojame, kad gausite savo atlygį, nes mūsų parduotuvės gera reputacija yra patikrinta ir neginčijama.",
                     "likes": 324,
                     "time": "1 d. 8 val."
@@ -2074,7 +2074,7 @@
                 },
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Paldies par jūsu komentāriem!",
                     "likes": 145,
                     "time": "15 min."
@@ -2091,7 +2091,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Paldies par jūsu komentāru, tas mums nozīmē ļoti daudz.",
                     "likes": 362,
                     "time": "13 st."
@@ -2114,7 +2114,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Cienījamais Damon Pugh, mēs garantējam, ka jūs saņemsiet savu balvu, jo mūsu veikala laba reputācija ir pierādīta un neapstrīdama.",
                     "likes": 324,
                     "time": "1 d. 8 st."
@@ -2167,7 +2167,7 @@
                 },
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Mulțumim pentru comentariile voastre!",
                     "likes": 145,
                     "time": "15 min"
@@ -2184,7 +2184,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Mulțumim pentru comentariul tău, înseamnă mult pentru noi.",
                     "likes": 362,
                     "time": "13 ore"
@@ -2207,7 +2207,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Dragă Damon Pugh, garantăm că vei primi recompensa ta, deoarece buna reputație a magazinului nostru este dovedită și incontestabilă.",
                     "likes": 324,
                     "time": "1 zi 8 ore"
@@ -2260,7 +2260,7 @@
                 },
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Շնորհակալություն ձեր մեկնաբանությունների համար։",
                     "likes": 145,
                     "time": "15 ր"
@@ -2277,7 +2277,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Շնորհակալություն ձեր մեկնաբանության համար, այն շատ կարևոր է մեզ համար։",
                     "likes": 362,
                     "time": "13 ժ"
@@ -2300,7 +2300,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Հարգելի Damon Pugh, մենք երաշխավորում ենք, որ դուք կստանաք ձեր պարգևը, քանի որ մեր խանութի լավ համբավը ապացուցված և անվիճելի է։",
                     "likes": 324,
                     "time": "1 օր 8 ժ"
@@ -2353,7 +2353,7 @@
                 },
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Благодарим за вашите коментари!",
                     "likes": 145,
                     "time": "15 мин"
@@ -2370,7 +2370,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Благодарим за вашия коментар, той означава много за нас.",
                     "likes": 362,
                     "time": "13 ч"
@@ -2393,7 +2393,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Уважаеми Damon Pugh, гарантираме, че ще получите вашата награда, защото добрата репутация на нашия магазин е доказана и неоспорима.",
                     "likes": 324,
                     "time": "1 д 8 ч"
@@ -2446,7 +2446,7 @@
                 },
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Şərhləriniz üçün təşəkkür edirik!",
                     "likes": 145,
                     "time": "15 dəq"
@@ -2463,7 +2463,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Şərhiniz üçün təşəkkür edirik, bu bizim üçün çox vacibdir.",
                     "likes": 362,
                     "time": "13 saat"
@@ -2486,7 +2486,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Hörmətli Damon Pugh, zəmanət veririk ki, mükafatınızı alacaqsınız, çünki mağazamızın yaxşı reputasiyası sübut olunmuş və mübahisəsizdir.",
                     "likes": 324,
                     "time": "1 gün 8 saat"
@@ -2539,7 +2539,7 @@
                 },
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Ви благодариме за вашите коментари!",
                     "likes": 145,
                     "time": "15 мин"
@@ -2556,7 +2556,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Ви благодариме за вашиот коментар, тоа многу ни значи.",
                     "likes": 362,
                     "time": "13 ч"
@@ -2579,7 +2579,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "Почитуван Damon Pugh, гарантираме дека ќе ја добиете вашата награда, бидејќи добрата репутација на нашата продавница е докажана и неспорна.",
                     "likes": 324,
                     "time": "1 д 8 ч"
@@ -2632,7 +2632,7 @@
                 },
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "شكرًا لتعليقاتكم!",
                     "likes": 145,
                     "time": "15 د"
@@ -2649,7 +2649,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "شكرًا لتعليقك، إنه يعني لنا الكثير.",
                     "likes": 362,
                     "time": "13 س"
@@ -2672,7 +2672,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "عزيزي Damon Pugh، نضمن لك أنك ستحصل على مكافأتك، لأن سمعة متجرنا الجيدة مثبتة ولا جدال فيها.",
                     "likes": 324,
                     "time": "1 ي 8 س"
@@ -2725,7 +2725,7 @@
                 },
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "תודה על התגובות שלכם!",
                     "likes": 145,
                     "time": "15 ד׳"
@@ -2742,7 +2742,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "תודה על התגובה שלך, זה מאוד חשוב לנו.",
                     "likes": 362,
                     "time": "13 ש׳"
@@ -2765,7 +2765,7 @@
             "replies": [
                 {
                     "username": "${shop} Support",
-                    "avatar": "assets/mini-logo.png",
+                    "avatar": "https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/smallLogo.png",
                     "text": "דיימון פו היקר, אנו מבטיחים שתקבל את הפרס שלך, שכן המוניטין הטוב של החנות שלנו מוכח ובלתי מעורער.",
                     "likes": 324,
                     "time": "1 י׳ 8 ש׳"

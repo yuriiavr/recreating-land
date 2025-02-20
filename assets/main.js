@@ -2,15 +2,14 @@ document.addEventListener("DOMContentLoaded", async function () {
   //Картинки
 
   const prodImageUrl = `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${prodLink}/main_product.png`;
-  const comment1Url = `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${prodLink}/comment-prize1.jpg`;
-  const comment2Url = `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${prodLink}/comment-prize2.jpg`;
-  const comment3Url = `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${prodLink}/comment-prize3.jpg`;
   const prizeBoxUrl = `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${prodLink}/prize_box.png`;
+  const logo = `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/logo.png`
 
   document.getElementById("mainProd").src = prodImageUrl;
+  document.getElementById("logo").src = logo;
 
   // Кінець картинок
-
+  
   const browserLang = navigator.language.split("-")[0];
   const supportedLangs = [
     "en",
@@ -156,6 +155,11 @@ async function loadComments(lang) {
               .replace(/\${cloudName}/g, cloudName)
               .replace(/\${prodLink}/g, prodLink)
           : null,
+        avatar: comment.avatar
+          ? comment.avatar
+              .replace(/\${cloudName}/g, cloudName)
+              .replace(/\${shopLink}/g, shopLink)
+          : null,
         replies: comment.replies
           ? comment.replies.map((reply) => ({
               ...reply,
@@ -165,6 +169,11 @@ async function loadComments(lang) {
                 ? reply.image
                     .replace(/\${cloudName}/g, cloudName)
                     .replace(/\${prodLink}/g, prodLink)
+                : null,
+              avatar: reply.avatar
+                ? reply.avatar
+                    .replace(/\${cloudName}/g, cloudName)
+                    .replace(/\${shopLink}/g, shopLink)
                 : null,
             }))
           : [],
@@ -314,3 +323,25 @@ $("#openPolicy").on("click", function () {
 $("#close-policy").on("click", function () {
   $(".pp-wrap").fadeOut(300);
 });
+
+
+
+async function applyShopStyles() {
+  try {
+    const response = await fetch("assets/styles.json");
+    const stylesData = await response.json();
+
+    const shopKey = shop.toLowerCase().replace(/\s+/g, "");
+
+    const stylesToApply = stylesData[shopKey] || stylesData["default"];
+
+    Object.entries(stylesToApply).forEach(([key, value]) => {
+      document.documentElement.style.setProperty(key, value);
+    });
+
+  } catch (error) {
+    console.error("Помилка завантаження стилів:", error);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", applyShopStyles);
