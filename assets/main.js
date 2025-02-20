@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", async function () {
   //Картинки
 
-  const cloudName = "dnrody7ol";
   const prodImageUrl = `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${prodLink}/main_product.png`;
   const comment1Url = `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${prodLink}/comment-prize1.jpg`;
   const comment2Url = `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${prodLink}/comment-prize2.jpg`;
@@ -9,10 +8,6 @@ document.addEventListener("DOMContentLoaded", async function () {
   const prizeBoxUrl = `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${prodLink}/prize_box.png`;
 
   document.getElementById("mainProd").src = prodImageUrl;
-  document.getElementById("prizeBox").src = prizeBoxUrl;
-  document.getElementById("com1").src = comment1Url;
-  document.getElementById("com2").src = comment2Url;
-  document.getElementById("com3").src = comment3Url;
 
   // Кінець картинок
 
@@ -124,9 +119,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 async function loadComments(lang) {
   try {
-    const response = await fetch(
-      "https://eae44083.comment-text-for-land.pages.dev/comment_text.json"
-    ); // замінити на CDN
+    const response = await fetch("assets/comment_text.json"); // замінити на CDN
     const translations = await response.json();
 
     if (!translations[lang]) {
@@ -158,11 +151,21 @@ async function loadComments(lang) {
       const formattedComment = {
         ...comment,
         text: comment.text.replace(/\${shop}/g, shop),
+        image: comment.image
+          ? comment.image
+              .replace(/\${cloudName}/g, cloudName)
+              .replace(/\${prodLink}/g, prodLink)
+          : null,
         replies: comment.replies
           ? comment.replies.map((reply) => ({
               ...reply,
               text: reply.text.replace(/\${shop}/g, shop),
               username: reply.username.replace(/\${shop}/g, shop),
+              image: reply.image
+                ? reply.image
+                    .replace(/\${cloudName}/g, cloudName)
+                    .replace(/\${prodLink}/g, prodLink)
+                : null,
             }))
           : [],
       };
