@@ -1,15 +1,16 @@
+const prodImageUrl = `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${prodLink}/main_product.png`;
+const prizeBoxUrl = `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${prodLink}/prize_box.png`;
+const logo = `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/logo.png`;
+
 document.addEventListener("DOMContentLoaded", async function () {
   //Картинки
 
-  const prodImageUrl = `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${prodLink}/main_product.png`;
-  const prizeBoxUrl = `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${prodLink}/prize_box.png`;
-  const logo = `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/logo.png`
-
   document.getElementById("mainProd").src = prodImageUrl;
   document.getElementById("logo").src = logo;
-
+  document.getElementById("lastProd").src = prizeBoxUrl;
+  document.getElementById("fullProd").src = prizeBoxUrl;
   // Кінець картинок
-  
+
   const browserLang = navigator.language.split("-")[0];
   const supportedLangs = [
     "en",
@@ -90,6 +91,12 @@ document.addEventListener("DOMContentLoaded", async function () {
       const questionText = document.getElementById("questionText");
       const questionNumber = document.getElementById("questionsNmb");
       const mainSection = document.getElementById("main-section");
+      const commentsSection = document.getElementById("commentsSection");
+      const footer = document.getElementById("footer");
+      const boxSection = document.getElementById("box-section");
+      const verify = document.getElementById('verification')
+      const loadingImage = document.querySelector("#verification img");
+      const boxCont = document.getElementById('boxCont')
 
       questionText.textContent = questions[0];
       questionNumber.textContent = texts.questionsNmb.replace("1", "1");
@@ -105,6 +112,27 @@ document.addEventListener("DOMContentLoaded", async function () {
             questionText.textContent = questions[currentQuestionIndex];
           } else {
             mainSection.style.display = "none";
+            commentsSection.style.display = "none";
+            footer.style.display = "none";
+            boxSection.style.display = "block";
+            loadingImage.style.animation = "spin 1s linear infinite";
+
+            const listItems = document.querySelectorAll("ul .result");
+
+            listItems.forEach((item, index) => {
+              item.style.opacity = "0";
+              item.style.transition = "opacity 0.5s";
+
+              setTimeout(() => {
+                item.style.opacity = "1";
+              }, index * 1000);
+            });
+            
+            setTimeout(() => {
+               verify.style.display = "none";
+               boxCont.style.display = 'block';
+            }, 5000)
+           
           }
         });
       });
@@ -312,10 +340,10 @@ $(".faq_question").on("click", function () {
 // Privacy Policy
 
 $(".close_modal").on("click", function () {
-  $("#visib_modal_first").fadeOut(600);
+  $("#visib-modal-first").fadeOut(600);
 });
 $(".close_second").on("click", function () {
-  $("#visib_modal_second").fadeOut(600);
+  $("#visib-modal-second").fadeOut(600);
 });
 $("#openPolicy").on("click", function () {
   $(".pp-wrap").fadeIn(300);
@@ -323,8 +351,6 @@ $("#openPolicy").on("click", function () {
 $("#close-policy").on("click", function () {
   $(".pp-wrap").fadeOut(300);
 });
-
-
 
 async function applyShopStyles() {
   try {
@@ -338,10 +364,77 @@ async function applyShopStyles() {
     Object.entries(stylesToApply).forEach(([key, value]) => {
       document.documentElement.style.setProperty(key, value);
     });
-
   } catch (error) {
     console.error("Помилка завантаження стилів:", error);
   }
 }
 
 document.addEventListener("DOMContentLoaded", applyShopStyles);
+
+
+// Коробки
+
+document.addEventListener("DOMContentLoaded", function () {
+  const giftBoxContainer = document.getElementById("gift-box-container");
+  const boxCount = 12;
+  let emptyBoxClicked = false; 
+  let modalShown = false;
+  let attemptsLeft = 3;
+
+  const boxTemplate = `
+      <div class="element-box">
+          <div class="box-cover"><img src="assets/header_box.png" alt="head box"></div>
+          <div class="shadow-box"><img src="assets/shadow_box.png" alt="shadow"></div>
+          <div class="prize"><img src="${prizeBoxUrl}" alt="prize box"></div>
+          <div class="box-body"><img src="assets/body_box.png" alt="body box"></div>
+      </div>
+  `;
+
+  for (let i = 0; i < boxCount; i++) {
+      giftBoxContainer.innerHTML += boxTemplate;
+  }
+
+  document.querySelectorAll(".element-box").forEach(box => {
+      box.addEventListener("click", function () {
+          let cover = this.querySelector(".box-cover");
+          let prize = this.querySelector(".prize");
+
+          if (attemptsLeft > 0) {
+              if (!emptyBoxClicked && !cover.classList.contains("open-box")) {
+                  cover.classList.add("open-box");
+                  emptyBoxClicked = true;
+                  attemptsLeft--;
+
+                  setTimeout(() => {
+                      document.getElementById("visib-modal-second").style.display = "block";
+                      modalShown = true;
+                  }, 1800);
+              } else if (emptyBoxClicked && modalShown) {
+                  if (!cover.classList.contains("open-box")) {
+                      cover.classList.add("open-box");
+                      prize.classList.add("open-prize");
+
+                      setTimeout(() => {
+                          document.getElementById("fullscreen_prize_visib").style.display = "block";
+
+                          setTimeout(() => {
+                              document.getElementById("fullscreen_prize_visib").style.display = "none";
+                              document.getElementById("visib-modal-third").style.display = "block";
+                          }, 3000);
+                      }, 2300);
+
+                      document.querySelectorAll(".element-box").forEach(box => box.removeEventListener("click", arguments.callee));
+                  }
+              }
+          }
+      });
+  });
+
+  document.querySelectorAll(".close_modal").forEach(button => {
+      button.addEventListener("click", function () {
+          document.getElementById("visib-modal-first").style.display = "none";
+          document.getElementById("visib-modal-second").style.display = "none";
+          document.getElementById("visib-modal-third").style.display = "none";
+      });
+  });
+});

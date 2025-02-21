@@ -155,3 +155,219 @@ img{
     height: 100%;
     line-height: 1.5em;
 }
+
+/* Box section */
+
+#box-section{
+    display: none;
+}
+
+.loader{
+    max-width: 150px;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.wrapp-gift-box {
+    display: grid;
+    grid-template-columns: repeat(4, 140px);
+    grid-template-rows: repeat(3, 190px);
+    justify-content: center;
+    gap: 110px;
+    margin-top: 130px;
+}
+
+.element-box {
+    position: relative;
+}
+
+.element-box:hover {
+    animation: shake .3s linear forwards;
+}
+
+@keyframes shake {
+    0%, 100% { transform: rotate(0deg); }
+    10% { transform: rotate(1deg); }
+    20% { transform: rotate(3deg); }
+    30% { transform: rotate(5deg); }
+    40% { transform: rotate(7deg); }
+    50% { transform: rotate(6deg); }
+    60% { transform: rotate(4deg); }
+    70% { transform: rotate(2deg); }
+    80% { transform: rotate(-2deg); }
+    90% { transform: rotate(-4deg); }
+}
+
+.box-cover, .shadow-box, .prize, .box-body {
+    position: absolute;
+    width: 100%;
+}
+
+.box-cover {
+    top: -41px;
+}
+
+.shadow-box {
+    z-index: -1;
+}
+
+.prize {
+    top: 30px;
+    left: 38px;
+    z-index: -1;
+}
+
+.box-body {
+    top: 13px;
+    left: 3px;
+    z-index: -1;
+}
+
+.open-box {
+    top: -94px;
+    transition: all 1.5s ease-in-out;
+}
+
+.open-prize {
+    top: -28px;
+    transition: all 2s ease-in-out;
+}
+
+#boxCont{
+    display: none;
+}
+
+#visib-modal-second {
+    display: none;
+}
+
+.wrapp_modal_window {
+    text-align: center;
+    border-radius: 15px;
+    position: absolute;
+    background-color: white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 500px;
+    z-index: 10;
+}
+.wrapp_modal_window:nth-of-type(2) {
+    max-width: 550px;
+}
+.modal_window_characteristik, .failed_attempt {
+    padding: 20px;
+}
+.modal_window_characteristik > img {
+    max-width: 200px;
+    width: 100%;
+    animation: boxModal 1.5s linear forwards;
+    animation-iteration-count: infinite;
+}
+
+.block_modal {
+    margin-bottom: 30px;
+}
+.modal_window_characteristik > h2 {
+    font-size: 25px;
+    opacity: .7;
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 10px;
+    word-break: break-word;
+}
+.failed_attempt > h2 {
+    opacity: .6;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 20px 0 0 0;
+}
+.modal_window_characteristik > ol {
+    list-style-type: none;
+    text-align: center;
+    font-size: 16px;
+    padding-bottom: 22px;
+    padding-left: 0;
+}
+.modal_window_characteristik > ol > li {
+    padding-bottom: 10px;
+}
+.failed_attempt > p {
+    font-size: 18px;
+    margin-top: 10px;
+    padding: 0 0 22px 0;
+    text-align: center;
+}
+.block_modal > a {
+    text-decoration: none;
+    background-color: var(--main_button_color);
+    color: white;
+    padding: 20px 50px;
+    font-size: 18px;
+    border-radius: 15px;
+    transition: all .3s ease-in-out;
+}
+.block_modal > a:hover {
+    cursor: pointer;
+    background-color: var(--main_button_hover);
+}
+.overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 9;
+}
+#fullscreen_prize_visib {
+    display: none;
+}
+.picture_after_boxes {
+    position: absolute;
+    z-index: 9;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-360deg);
+    transition: transform 2.5s ease-in-out;
+    width: 100%;
+    max-width: 320px;
+}
+
+.picture_after_boxes.active {
+    transform: translate(-50%, -50%);
+}
+.failed_attempt > ul {
+    list-style-type: none;
+    text-align: center;
+    margin-bottom: 45px;
+    font-size: 16px;
+    opacity: .7;
+    line-height: 30px;
+    padding: 0;
+    font-family: var(--main_fonts);
+}
+.failed_attempt > img {
+    max-width: 200px;
+    width: 100%;
+}
+.decor_last_modal > h2 {
+    font-size: 30px;
+    font-family: var(--main_fonts);
+}
+.last_modal_button > a {
+    text-decoration: none;
+    background-color: var(--main_button_color);
+    color: white;
+    padding: 20px 100px;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+}
+#visib-modal-third {
+    display: none;
+}

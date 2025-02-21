@@ -29,18 +29,23 @@
       }
     </style>
     <script>
-      const prod = "Iphone 16 Pro";
-      const shop = "Walmart";
+      const prod = "PS5";
+      const shop = "Amazon";
       const price = "1.95$";
       const country = "US";
       const cloudName = "dnrody7ol";
       const shopLink = shop.toLowerCase().replace(/\s+/g, "");
       const prodLink = prod.toLowerCase().replace(/\s+/g, "");
-
     </script>
 
     <header class="header">
-      <img src="assets/logo.png" alt="logo" width="320" class="logo" id="logo" />
+      <img
+        src="assets/logo.png"
+        alt="logo"
+        width="320"
+        class="logo"
+        id="logo"
+      />
       <div class="block_timer">
         <p id="timerTitle">Time remaining:</p>
         <div class="wrap">
@@ -172,9 +177,117 @@
         </div>
       </section>
 
-      <section id="box-section"></section>
+      <section id="box-section">
+        <div id="verification">
+          <div>
+            <h2>Your answers are being verified</h2>
+            <img class="loader" src="assets/img_loading.png" alt="loading" />
+          </div>
+          <div>
+            <ul>
+              <li class="result">You've answered 3/3 of the questions!</li>
+              <li class="result">
+                There are no preliminary investigations on your IP
+              </li>
+              <li class="result">The presents are loaded...</li>
+            </ul>
+          </div>
+        </div>
+        <div id="boxCont">
+          <div id="visib-modal-first">
+            <div class="container">
+              <div class="overlay"></div>
+              <div class="wrapp_modal_window">
+                <div class="modal_window_characteristik">
+                  <img src="assets/box_modal.png" alt="box" />
+                  <h2>
+                    Congratulations, you've successfully verified that you're a
+                    real person.
+                  </h2>
+                  <ol>
+                    <li>
+                      Now you can get Milwaukee M18 18V Lithium-Ion Cordless Combo
+                      Kit!
+                    </li>
+                    <li>Simply choose the right gift box.</li>
+                    <li>You have 3 tries, good luck!</li>
+                  </ol>
+                  <button class="close_modal">OK</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="visib-section-prize">
+            <div class="container">
+              <div id="gift-box-container" class="wrapp-gift-box"></div>
+            </div>
+          </div>
+        </div>
 
-      <section id="visible_comments">
+        <div id="visib-modal-second">
+          <div class="container">
+            <div class="overlay"></div>
+            <div class="wrapp_modal_window">
+              <div class="failed_attempt">
+                <h2>OHHH...</h2>
+                <p>
+                  Sorry, this gift box is empty! But you can try twice more. We
+                  wish you good luck!
+                </p>
+                <div class="block_modal">
+                  <button class="close_modal close_second">OK</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="fullscreen_prize_visib">
+          <div class="overlay"></div>
+          <img
+            class="picture_after_boxes"
+            src=""
+            id="fullProd"
+            alt="prize"
+          />
+        </div>
+        <div id="visib-modal-third">
+          <div class="container">
+              <div class="overlay"></div>
+              <div class="wrapp_modal_window">
+                  <div class="failed_attempt decor_last_modal">
+                      <img src="" id="lastProd" alt="product images">
+                      <h2>¡Felicidades! ¡Ganaste!</h2>
+                      <ul>
+                          <li>1) Haga clic en "Aplicar ya".</li>
+                          <li>2) Rellena el formulario y paga el envío.</li>
+                          <li>3) El paquete se entrega dentro de 5-7 días..</li>
+                      </ul>
+                      <div class="block_modal last_modal_button">
+                          <a id = "offer_button"
+                              onclick="fbq('track', 'InitiateCheckout');">Aplica ya</a>
+                      </div>
+                      <script>
+                          document.getElementById('offer_button').addEventListener('click', function() {
+                              const url = 'https://{trackingdomain}/click/?origin={origin}&fbpixel={lander.param:fbpixel}';
+                              if (window.parent && window.parent !== window) {
+                                  
+                                  window.parent.postMessage({
+                                      type: 'navigate',
+                                      url: url
+                                  }, '*');
+                              } else {
+                                  
+                                  window.location.href = url;
+                              }
+                          });
+                      </script>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="commentsSection">
         <div class="container">
           <div class="comment_header">
             <h2 id="commentsHeader">Comments:</h2>
@@ -285,7 +398,7 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer id="footer" class="footer">
       <span class="footer-item" id="shopLink">.com or its subsidiaries</span>
       <span class="footer-item" id="openPolicy">Privacy policy</span>
       <span class="footer-item" id="repAbuse">Report abuse</span>
