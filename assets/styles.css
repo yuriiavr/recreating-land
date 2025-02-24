@@ -2,6 +2,7 @@ body{
     color: #000;
     margin: 0;
     font-size: 16px;
+    font-family: "Atkinson Hyperlegible Next", serif;
 }
 
 h1,h2,h3,h4,h5,p{
@@ -201,13 +202,14 @@ img{
     90% { transform: rotate(-4deg); }
 }
 
-.box-cover, .shadow-box, .prize, .box-body {
+.box-cover, .shadow-box, .box-body {
     position: absolute;
     width: 100%;
 }
 
 .box-cover {
     top: -41px;
+    width: 105%;
 }
 
 .shadow-box {
@@ -215,9 +217,11 @@ img{
 }
 
 .prize {
-    top: 30px;
+    position: absolute;
+    top: 25px;
     left: 38px;
     z-index: -1;
+    width: 53%;
 }
 
 .box-body {
@@ -259,6 +263,13 @@ img{
 .wrapp_modal_window:nth-of-type(2) {
     max-width: 550px;
 }
+
+.modal_window_characteristik{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .modal_window_characteristik, .failed_attempt {
     padding: 20px;
 }
@@ -275,7 +286,7 @@ img{
 .modal_window_characteristik > h2 {
     font-size: 25px;
     opacity: .7;
-    margin: 0 auto;
+    margin: 20px auto;
     width: 100%;
     padding-top: 10px;
     word-break: break-word;
@@ -302,7 +313,18 @@ img{
     padding: 0 0 22px 0;
     text-align: center;
 }
-.block_modal > a {
+
+#offer_button{
+    cursor: pointer;
+}
+
+.failed_attempt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.close_modal {
     text-decoration: none;
     background-color: var(--main_button_color);
     color: white;
@@ -311,7 +333,7 @@ img{
     border-radius: 15px;
     transition: all .3s ease-in-out;
 }
-.block_modal > a:hover {
+.close_modal:hover {
     cursor: pointer;
     background-color: var(--main_button_hover);
 }
@@ -370,4 +392,37 @@ img{
 }
 #visib-modal-third {
     display: none;
+}
+
+#verification{
+    display: flex;
+    flex-direction: column;
+}
+
+#verification h2{
+    font-size: 42px;
+    font-weight: bold;
+    margin: 20px auto;
+    font-family: "Atkinson Hyperlegible Next", serif;
+}
+
+#verification ul{
+    margin-top: 20px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    padding-left: 20px;
+}
+
+#verification li{
+    font-size: 22px;
+    font-weight: bold;
+    font-family: "Atkinson Hyperlegible Next", serif;
+}
+
+.loader-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

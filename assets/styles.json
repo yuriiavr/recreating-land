@@ -1,8 +1,9 @@
 {
     "amazon": {
       "--bg_color_header": "#232F3E",
-      "--button-color": "#232F3E",
-      "--main_button_hover": "#1b242f",
+      "--button-color": "#1b242f",
+      "--main_button_color": "#1b242f",
+      "--main_button_hover": "#232F3E",
       "--bg_color_footer": "#232F3E",
       "--bg_color_timer": "white",
       "--color_timer": "black"
@@ -10,6 +11,7 @@
     "walmart": {
       "--bg_color_header": "transparent",
       "--button-color": "#0075fa",
+      "--main_button_color": "#1b242f",
       "--main_button_hover": "#0083fd",
       "--bg_color_footer": "#0075fa",
       "--bg_color_timer": "black",
@@ -18,6 +20,7 @@
     "aliexpress": {
       "--bg_color_header": "#FF4747",
       "--button-color": "#F60",
+      "--main_button_color": "#1b242f",
       "--main_button_hover": "#D04A02",
       "--bg_color_footer": "#FF4747",
       "--bg_color_timer": "#F60",
@@ -26,6 +29,7 @@
     "default": {
       "--bg_color_header": "transparent",
       "--button-color": "#000",
+      "--main_button_color": "#1b242f",
       "--main_button_hover": "#111",
       "--bg_color_footer": "#000",
       "--bg_color_timer": "black",

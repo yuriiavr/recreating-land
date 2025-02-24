@@ -3,6 +3,8 @@
     text-align: center;
     color: var(--bg_color_timer);
     margin: 15px 0;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
 }
 .block_timer > p {
     margin-top: 0;

@@ -125,13 +125,13 @@ document.addEventListener("DOMContentLoaded", async function () {
 
               setTimeout(() => {
                 item.style.opacity = "1";
-              }, index * 1000);
+              }, index * 1500);
             });
             
             setTimeout(() => {
                verify.style.display = "none";
                boxCont.style.display = 'block';
-            }, 5000)
+            }, 6000)
            
           }
         });
