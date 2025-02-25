@@ -97,6 +97,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       const verify = document.getElementById('verification')
       const loadingImage = document.querySelector("#verification img");
       const boxCont = document.getElementById('boxCont')
+      const btnCont = document.getElementById('btnCont')
 
       questionText.textContent = questions[0];
       questionNumber.textContent = texts.questionsNmb.replace("1", "1");
@@ -110,6 +111,35 @@ document.addEventListener("DOMContentLoaded", async function () {
               currentQuestionIndex + 1
             )}`;
             questionText.textContent = questions[currentQuestionIndex];
+            questionText.style.transition = "opacity 0.3s ease";
+            questionText.style.opacity = "0";
+            questionNumber.style.transition = "opacity 0.3s ease";
+            questionNumber.style.opacity = "0";
+            btnCont.style.transition = "opacity 0.3s ease";
+            btnCont.style.opacity = "0";
+
+            setTimeout(() => {
+              questionText.textContent = questions[currentQuestionIndex];
+              questionText.style.transform = "rotate(-10deg)";
+              questionText.style.opacity = "0";
+              questionNumber.style.transform = "rotate(-10deg)";
+              questionNumber.style.opacity = "0";
+              btnCont.style.transform = "rotate(0deg)";
+              btnCont.style.opacity = "0";
+          
+              setTimeout(() => {
+                questionText.style.transition = "transform 0.5s, opacity 0.5s";
+                questionText.style.transform = "rotate(0deg)";
+                questionText.style.opacity = "1";
+                questionNumber.style.transition = "transform 0.5s, opacity 0.5s";
+                questionNumber.style.transform = "rotate(0deg)";
+                questionNumber.style.opacity = "1";
+                btnCont.style.transition = "transform 0.5s, opacity 0.5s";
+                btnCont.style.transform = "rotate(0deg)";
+                btnCont.style.opacity = "1";
+              }, 50);
+          
+            }, 250);
           } else {
             mainSection.style.display = "none";
             commentsSection.style.display = "none";
@@ -415,11 +445,30 @@ document.addEventListener("DOMContentLoaded", function () {
                       prize.classList.add("open-prize");
 
                       setTimeout(() => {
-                          document.getElementById("fullscreen_prize_visib").style.display = "block";
+                        document.getElementById("fullscreen_prize_visib").style.display = "block";
+                    
+                        const fullProd = document.getElementById("fullProd");
+                        let duration = 200; // 2.5 секунди
+                        let start
+                    
+                        function rotate(timestamp) {
+                            if (!start) start = timestamp;
+                            let progress = timestamp - start;
+                            let rotation = Math.min((progress / duration) * 1440, 1440);  
+                    
+                            fullProd.style.transform = `translate(-50%, -50%) rotate(${rotation}deg)`;
+                    
+                            if (progress < duration) {
+                                requestAnimationFrame(rotate);
+                            }
+                        }
+
+                        requestAnimationFrame(rotate);
 
                           setTimeout(() => {
                               document.getElementById("fullscreen_prize_visib").style.display = "none";
                               document.getElementById("visib-modal-third").style.display = "block";
+                              document.getElementById("fullProd").classList.remove("active");
                           }, 3000);
                       }, 2300);
 
