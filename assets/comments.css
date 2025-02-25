@@ -199,3 +199,9 @@
     max-width: 500px;
     margin-top: 10px;
 }
+
+@media screen and (max-width: 406px) {
+    .first_response{
+        margin-left: 20px;
+    }
+}
