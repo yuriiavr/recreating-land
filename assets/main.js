@@ -4,9 +4,9 @@ const shopBox = validShops.includes(shopLink) ? shopLink : "default";
 const prodImageUrl = `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${prodLink}/main_product.png`;
 const prizeBoxUrl = `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${prodLink}/prize_box.png`;
 const logo = `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/logo.png`;
-const boxModal = `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopBox}/box_modal.png`;
-const boxCoverUrl = `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopBox}/box_cover.png`
-const boxBodyUrl = `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopBox}/box_body.png`
+const boxModal = validShops.includes(shopLink) ? `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/box_modal.png` : "assets/box_modal.png";
+const boxCoverUrl = validShops.includes(shopLink) ? `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/box_cover.png` : "assets/header_box.png";
+const boxBodyUrl = validShops.includes(shopLink) ? `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/box_body.png` : "assets/body_box.png";
 
 document.addEventListener("DOMContentLoaded", async function () {
   //Картинки

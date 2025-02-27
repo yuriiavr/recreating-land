@@ -185,7 +185,13 @@ img {
 }
 
 .loader {
-  max-width: 150px;
+  max-width: 100px;
+}
+
+@media screen and (max-width:767px) {
+  .loader {
+    max-width: 75px;
+  }
 }
 
 @keyframes spin {
@@ -200,7 +206,7 @@ img {
 .wrapp-gift-box {
   display: grid;
   grid-template-columns: repeat(4, 140px);
-  grid-template-rows: repeat(3, 190px);
+  grid-template-rows: repeat(3, 100px);
   justify-content: center;
   gap: 110px;
   margin-top: 130px;
