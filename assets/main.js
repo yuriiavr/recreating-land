@@ -1,6 +1,12 @@
+const validShops = ["amazon", "walmart", "lidl"];
+const shopBox = validShops.includes(shopLink) ? shopLink : "default";
+
 const prodImageUrl = `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${prodLink}/main_product.png`;
 const prizeBoxUrl = `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${prodLink}/prize_box.png`;
 const logo = `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopLink}/logo.png`;
+const boxModal = `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopBox}/box_modal.png`;
+const boxCoverUrl = `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopBox}/box_cover.png`
+const boxBodyUrl = `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/dev/${shopBox}/box_body.png`
 
 document.addEventListener("DOMContentLoaded", async function () {
   //Картинки
@@ -9,6 +15,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   document.getElementById("logo").src = logo;
   document.getElementById("lastProd").src = prizeBoxUrl;
   document.getElementById("fullProd").src = prizeBoxUrl;
+  document.getElementById("box_modal").src = boxModal;
   // Кінець картинок
 
   const browserLang = navigator.language.split("-")[0];
@@ -413,10 +420,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const boxTemplate = `
       <div class="element-box">
-          <div class="box-cover"><img src="assets/header_box.png" alt="head box"></div>
+          <div class="box-cover"><img src="${boxCoverUrl}" alt="head box"></div>
           <div class="shadow-box"><img src="assets/shadow_box.png" alt="shadow"></div>
           <div class="prize"><img src="${prizeBoxUrl}" alt="prize box"></div>
-          <div class="box-body"><img src="assets/body_box.png" alt="body box"></div>
+          <div class="box-body"><img src="${boxBodyUrl}" alt="body box"></div>
       </div>
   `;
 
