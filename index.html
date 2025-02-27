@@ -180,16 +180,16 @@
       <section id="box-section">
         <div id="verification">
           <div class="loader-cont">
-            <h2>Your answers are being verified</h2>
+            <h2 id="v1">Your answers are being verified</h2>
             <img class="loader" src="assets/img_loading.png" alt="loading" />
           </div>
           <div>
             <ul>
-              <li class="result">You've answered 3/3 of the questions!</li>
-              <li class="result">
+              <li id="v2_1" class="result">You've answered 3/3 of the questions!</li>
+              <li id="v2_2" class="result">
                 There are no preliminary investigations on your IP
               </li>
-              <li class="result">The presents are loaded...</li>
+              <li id="v2_3" class="result">The presents are loaded...</li>
             </ul>
           </div>
         </div>
@@ -200,19 +200,19 @@
               <div class="wrapp_modal_window">
                 <div class="modal_window_characteristik">
                   <img src="assets/box_modal.png" alt="box" />
-                  <h2>
+                  <h2 id="m1_1">
                     Congratulations, you've successfully verified that you're a
                     real person.
                   </h2>
                   <ol>
-                    <li>
+                    <li id="m1_2">
                       Now you can get Milwaukee M18 18V Lithium-Ion Cordless Combo
                       Kit!
                     </li>
-                    <li>Simply choose the right gift box.</li>
-                    <li>You have 3 tries, good luck!</li>
+                    <li id="m1_3">Simply choose the right gift box.</li>
+                    <li id="m1_4">You have 3 tries, good luck!</li>
                   </ol>
-                  <button class="close_modal">OK</button>
+                  <button id="m1_5" class="close_modal">OK</button>
                 </div>
               </div>
             </div>
@@ -229,13 +229,13 @@
             <div class="overlay"></div>
             <div class="wrapp_modal_window">
               <div class="failed_attempt">
-                <h2>OHHH...</h2>
-                <p>
+                <h2 id="m2_1">OHHH...</h2>
+                <p id="m2_2">
                   Sorry, this gift box is empty! But you can try twice more. We
                   wish you good luck!
                 </p>
                 <div class="block_modal">
-                  <button class="close_modal close_second">OK</button>
+                  <button id="m2_3" class="close_modal close_second">OK</button>
                 </div>
               </div>
             </div>
@@ -256,14 +256,14 @@
               <div class="wrapp_modal_window">
                   <div class="failed_attempt decor_last_modal">
                       <img src="" id="lastProd" alt="product images">
-                      <h2>¡Felicidades! ¡Ganaste!</h2>
+                      <h2 id="m3_1">¡Felicidades! ¡Ganaste!</h2>
                       <ul>
-                          <li>1) Haga clic en "Aplicar ya".</li>
-                          <li>2) Rellena el formulario y paga el envío.</li>
-                          <li>3) El paquete se entrega dentro de 5-7 días..</li>
+                          <li id="m3_2">1) Haga clic en "Aplicar ya".</li>
+                          <li id="m3_3">2) Rellena el formulario y paga el envío.</li>
+                          <li id="m3_4">3) El paquete se entrega dentro de 5-7 días..</li>
                       </ul>
                       <div class="block_modal last_modal_button">
-                          <a id = "offer_button"
+                          <a id="offer_button"
                               onclick="fbq('track', 'InitiateCheckout');">Aplica ya</a>
                       </div>
                       <script>

@@ -162,9 +162,26 @@
     width: 100%;
     align-items: center;
 }
+
 .width_input_comment {
     width: 90%;
 }
+
+@media screen and (max-width:1199px) {
+    .comment_form{
+        justify-content: space-between;
+    }
+
+    .width_input_comment {
+        width: 100%;
+        margin-right: 10px;
+    }
+
+    .comment_text_input {
+        padding: 10px;
+    }
+}
+
 .margin_button_comment {
     margin-left: 15px;
 }
