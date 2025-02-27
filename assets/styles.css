@@ -176,6 +176,10 @@ img {
     align-items: center;
     row-gap: 10px;
   }
+
+  .wrapp-policy{
+    width: 80%;
+  }
 }
 
 /* Box section */
