@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   localStorage.setItem("lang", lang);
 
   try {
-    const response = await fetch("assets/translations.json"); // замінити на CDN
+    const response = await fetch("https://res.cloudinary.com/dnrody7ol/raw/upload/v1740748037/json/translations.json"); // замінити на CDN
     const translations = await response.json();
 
     if (!translations[lang]) {
@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 async function loadComments(lang) {
   try {
-    const response = await fetch("assets/comment_text.json"); // замінити на CDN
+    const response = await fetch("https://res.cloudinary.com/dnrody7ol/raw/upload/v1740748167/json/comment_text.json"); // замінити на CDN
     const translations = await response.json();
 
     if (!translations[lang]) {
@@ -391,7 +391,7 @@ $("#close-policy").on("click", function () {
 
 async function applyShopStyles() {
   try {
-    const response = await fetch("assets/styles.json");
+    const response = await fetch("https://res.cloudinary.com/dnrody7ol/raw/upload/v1740748048/json/styles.json");
     const stylesData = await response.json();
 
     const shopKey = shop.toLowerCase().replace(/\s+/g, "");
