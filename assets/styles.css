@@ -282,6 +282,11 @@ img {
   width: 53%;
 }
 
+.prize img{
+  height: 40px;
+  width: auto;
+}
+
 .box-body {
   top: 13px;
   left: 3px;
